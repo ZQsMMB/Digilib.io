@@ -58,9 +58,9 @@
 					WHERE kodeMhs = $kodeMhs");			
 			else
 				$db->execute("UPDATE tb_mahasiswa SET 
-					nama = '$nama', username = '$username', password = '".md5($password)."', email = '$email', tempatLahir = '$tpl', tanggalLahir = '$ttl', alamat = '$alamat'
-					WHERE kodeMhs = $kodeMhs");			
-			redirect("?page=daftar_mahasiswa","");
+					nama = '$nama', username = '$username', password = '".md5($password)."', email = '$email', tempatLahir = '$tpl', tanggalLahir = '$ttl', alamat = '$alamat','','')"); //bug
+					WHERE kodeMhs = $kodeMhs"); 			
+			redirect("?page=daftar_mahasiswa",""); 
 		}
 	}
 	
