@@ -8,8 +8,7 @@
 		if(isset($tb)) {
 			$file= "img/" . $_FILES['image']['name']; //menyimpan dalam folder img (PPT PAGE 4)
 			$tmp = $_FILES['image']["error"]['tmp_name'];
-			
-			$db->execute("UPDATE tb_buku SET 
+			$db->execute("UPDATE tb_buku SET
 				judul = '$judul', kodePenerbit = '$kodePenerbit', kodePengarang = '$kodePengarang', tahun = '$tahun', edisi = '$edisi',
 				issn_isbn = '$issn_isbn', seri = '$seri', abstraksi = '$abstraksi', kodeKategori = '$kodeKategori', tglUpdate = '$date',
 				lastUpdateBy = '$idUser', image='$file' 
@@ -51,16 +50,16 @@
 					nama = '$nama', username = '$username', password = '".md5($password)."', email = '$email', tempatLahir = '$tpl', tanggalLahir = '$ttl', alamat = '$alamat'
 					WHERE kodeDosen = $kodeDosen");			
 			redirect("?page=daftar_dosen","");
-		} if(isset($tum)) {
+		} if(isset($tum)) { 
 			if($password == "")
 				$db->execute("UPDATE tb_mahasiswa SET 
 					nama = '$nama', username = '$username', email = '$email', tempatLahir = '$tpl', tanggalLahir = '$ttl', alamat = '$alamat'
-					WHERE kodeMhs = $kodeMhs");			
+					WHERE kodeMhs = $kodeMhs");		
 			else
-				$db->execute("UPDATE tb_mahasiswa SET 
-					nama = '$nama', username = '$username', password = '".md5($password)."', email = '$email', tempatLahir = '$tpl', tanggalLahir = '$ttl', alamat = '$alamat','','')"); //bug
+				$db->execute("IN tb_mahasiswa SET 
+					nama = '$nama', username = '$username', password = '".md5($password)."', email = '$email', tempatLahir = '$tpl', tanggalLahir = '$ttl', alamat = '$alamat'
 					WHERE kodeMhs = $kodeMhs"); 			
-			redirect("?page=daftar_mahasiswa",""); 
+			redirect("?page=daftar_mahasiswa","");
 		}
 	}
 	
@@ -93,7 +92,7 @@
 			redirect("?page=daftar_dosen","");
 		} if(isset($tum)) {
 			$db->execute("INSERT INTO tb_mahasiswa 
-				VALUES ('','$username','".md5($password)."','$nama','$email','$date','$date','tpl','$ttl','$alamat','')");
+				VALUES ('','$username','".md5($password)."','$nama','$email','$date','$date','tpl','$ttl','$alamat','','')");
 			redirect("?page=daftar_mahasiswa","");
 		}
 	}

@@ -20,15 +20,19 @@
 		</form>
 	</div><!--/span-->
 	<div class="span9 well" id="main-content">
-	  <div class="row-fluid">
-		<div class="span12">
-		
+	 
 		  <?php 
 			if(!isset($page)) {
 		  ?>
 			  <h2>Selamat Datang</h2>
 			  <p>Anda dapat melakukan login di panel sebelah kiri, kemudian melakukan peminjaman buku.</p>
 			  <p>Batas peminjaman buku adalah maks 1 x 2 buku / hari</p>
+
+<div class="row-fluid">
+		<div class="span12 well" align="center" id="main-content-footer">
+		<p>copyright @ 2014 digilibme-PENS.com. All Right Reserved<br>design by iqbal gtg bgt</p>
+	</div>
+</div>
 			  
 			  <!--
 			  <a href="?page=register" rel="tooltip" title="Daftar" class="btn btn-large btn-success">
