@@ -10,12 +10,12 @@
 	$db=new MySQL();
 	$db->connect();
 	$db->execute("SELECT b.kodeBuku, b.judul, p1.nama, p2.nama, b.tahun, b.edisi, b.issn_isbn, 
-		b.seri, b.abstraksi, k.namaKategori
+		b.seri, b.abstraksi, k.namaKategori, b.image
 		FROM tb_buku b, tb_penerbit p1, tb_pengarang p2, tb_kategori k
 		WHERE b.kodePenerbit = p1.kodePenerbit
 		AND b.kodePengarang = p2.kodePengarang
 		AND b.kodeKategori = k.kodeKategori
-		limit $posisi, $batas"); 
+		limit $posisi, $batas"); //line 13 ditambahkan b.image
 	$data=$db->get_dataset();
 ?>
 
@@ -41,11 +41,11 @@
 	$db=new MySQL();
 	$db->connect();
 	$db->execute("SELECT b.kodeBuku, b.judul, p1.nama, p2.nama, b.tahun, b.edisi, b.issn_isbn, 
-		b.seri, b.abstraksi, k.namaKategori
+		b.seri, b.abstraksi, k.namaKategori, b.image
 		FROM tb_buku b, tb_penerbit p1, tb_pengarang p2, tb_kategori k
 		WHERE b.kodePenerbit = p1.kodePenerbit
 		AND b.kodePengarang = p2.kodePengarang
-		AND b.kodeKategori = k.kodeKategori"); 
+		AND b.kodeKategori = k.kodeKategori"); //line 44 ditambahkan b.image
 	$data2=$db->get_dataset();
 	$jum=count($data2);
 	$jhal=ceil($jum/$batas);
@@ -80,7 +80,7 @@
 		<input type="hidden" name="kodePeminjam" id="kodePeminjam" value="<?=$idUser?>">
 		<input type="hidden" name="type" id="type" value="<?=$type?>">
 		<div class="span4">
-			<p><img src="img/no_image.jpg" class="img-polaroid img"></p>
+			<p><img src="<?=$data[$i][10]?>" class="img-polaroid img"></p>
 		</div>
 		<div class="span7 title">
 			<table class="table table-condensed">

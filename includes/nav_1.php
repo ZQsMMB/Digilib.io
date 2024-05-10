@@ -10,7 +10,7 @@
 			  </a>
 			  <div class="nav-collapse collapse">
 				<ul class="nav">
-				  <li class="active home"><a href="#"><i class="icon-home icon-white"></i></a></li><!---yusril-->
+				  <li class="active home"><a href="index.php"><i class="icon-home icon-white"></i></a></li><!---yusril-->
 				  <li><a href="?page=bantuan"><i class="icon-info-sign icon-white"></i> Bantuan</a></li> <!--Yusril-->
 				</ul>
 				<ul class="pull-right nav">

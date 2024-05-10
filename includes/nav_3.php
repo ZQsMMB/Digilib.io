@@ -13,7 +13,7 @@
 				  <li class="active home"><a href="index.php"><i class="icon-home icon-white"></i></a></li><!--yusril-->
 				  <li><a href="?page=pinjaman"><i class="icon-shopping-cart icon-white"></i> Pinjaman</a></li>
 				  <li><a href="?page=history"><i class="icon-calendar icon-white"></i> History Pinjaman</a></li>
-				  <li><a href="#?page=bantuan"><i class="icon-info-sign icon-white"></i> Bantuan</a></li><!--yusril-->
+				  <li><a href="?page=bantuan"><i class="icon-info-sign icon-white"></i> Bantuan</a></li><!--yusril-->
 				</ul>
 				<ul class="pull-right nav">
 					<li>

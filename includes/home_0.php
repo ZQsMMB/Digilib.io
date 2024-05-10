@@ -29,8 +29,8 @@
 			  <p>Batas peminjaman buku adalah maks 1 x 2 buku / hari</p>
 
 <div class="row-fluid">
-		<div class="span12 well" align="center" id="main-content-footer">
-		<p>copyright @ 2014 digilibme-PENS.com. All Right Reserved<br>design by iqbal gtg bgt</p>
+		<div class="span12 well" allign="center" id="main-content-footer">
+		<p>copyright @ 2014 digilibme-PENS.com. All Right Reserved<br>Designed By Kelompok 4</p>
 	</div>
 </div>
 			  
